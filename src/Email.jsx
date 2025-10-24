@@ -14,8 +14,8 @@ export default function Email() {
     fetch(`${apiUrl}/api/email`)
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.email) {
-          setCurrentEmail(data.email);
+        if (data && data.address) {
+          setCurrentEmail(data.address);
         }
       })
       .catch((err) => console.error("Error fetching email:", err));
